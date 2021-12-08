@@ -47,7 +47,7 @@
 		<vertx.version>3.4.2</vertx.version>
 		<hystrix.version>1.5.1</hystrix.version>
 		<version.exec.plugin>1.4.0</version.exec.plugin>
-		<version.jaeger>0.19.0</version.jaeger>
+		<version.jaeger>0.27.0</version.jaeger>
 
 		<!-- Setting the image explicity to use redhat-openjdk -->
 		<!-- There is kind of issue honoring JAVA_OPTIONS with fabric8-s2i images -->
@@ -143,8 +143,7 @@
 						</goals>
 						<configuration>
 							<transformers>
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<manifestEntries>
 										<Main-Class>${java.main.class}</Main-Class>
 										<Main-Verticle>${vertx.main.verticle}</Main-Verticle>
